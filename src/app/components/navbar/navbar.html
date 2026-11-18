@@ -1,0 +1,59 @@
+
+
+<nav class="navbar">
+
+  <div class="logo">
+    <a routerLink="/" (click)="cerrarMenu()">Jesucristo es el unico salvador (Hechos 4:12)</a>
+  </div>
+
+  <!-- Botón hamburguesa -->
+  <button
+    class="menu-toggle"
+    (click)="toggleMenu()"
+    aria-label="Abrir o cerrar menú"
+    [attr.aria-expanded]="menuAbierto()">
+
+    @if (menuAbierto()) {
+      ✕
+    } @else {
+      ☰
+    }
+
+  </button>
+
+  <!-- Enlaces -->
+  <ul class="nav-links" [class.active]="menuAbierto()">
+
+    <li>
+      <a routerLink="/" (click)="cerrarMenu()">Inicio</a>
+    </li>
+
+    <li>
+      <a routerLink="/" fragment="creacion" (click)="cerrarMenu()">Creación</a>
+    </li>
+
+    <li>
+      <a routerLink="/" fragment="el-eden" (click)="cerrarMenu()">El Edén</a>
+    </li>
+
+    <li>
+      <a routerLink="/" fragment="la-caida" (click)="cerrarMenu()">La caída</a>
+    </li>
+
+    <li>
+      <a routerLink="/" fragment="restauracion" (click)="cerrarMenu()">Restauración</a>
+    </li>
+
+    <li>
+      <a routerLink="/" fragment="alabanzas" (click)="cerrarMenu()">Alabanzas</a>
+    </li>
+
+    <li>
+      <a routerLink="/mensaje" (click)="cerrarMenu()">Mensajes</a>
+    </li>
+
+  </ul>
+
+</nav>
+
+  

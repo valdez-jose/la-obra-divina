@@ -1,0 +1,40 @@
+
+<section class="alabanzas">
+
+  <div class="container">
+
+    <h2>Canta Alabanza a Jehová</h2>
+
+    <p class="descripcion">
+      Alabemos juntos al Señor con cánticos de gratitud y adoración.
+    </p>
+
+    <div class="cards">
+
+      @for (alabanza of listaAlabanzas; track alabanza.id) {
+
+        <article class="card">
+
+          <div class="video">
+            <iframe
+              [src]="alabanza.video"
+              [title]="alabanza.titulo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="card-content">
+            <h3>Titulo: {{ alabanza.titulo }}</h3>
+            <p>Autor: {{ alabanza.autor }}</p>
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

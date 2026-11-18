@@ -1,0 +1,82 @@
+
+.banner-publicidad {
+  width: 100%;                  /* Ocupa todo el ancho de la pantalla */
+  background-color: #1a1a1a;    /* Fondo oscuro de contraste (o cámbialo a tu gusto) */
+  padding: 1.5rem 1rem;
+  margin: 2.5rem 0;             /* Separación de las demás secciones */
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales para las cards */
+  gap: 1rem;                    /* Espacio entre cada card */
+  max-width: 1300px;            /* Ancho máximo para que no se estiren de más en pantallas gigantes */
+  margin: 0 auto;               /* Centrado automático */
+}
+
+.libro-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 0.8rem;
+  display: flex;                /* Permite poner imagen a la izquierda y texto a la derecha */
+  align-items: center;          /* Centrado vertical */
+  gap: 0.8rem;                  /* Espacio entre la imagen y el texto */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.libro-card:hover {
+  transform: translateY(-2px);  /* Sutil efecto al pasar el mouse */
+}
+
+.card-img {
+  width: 60px;                  /* Ancho pequeño y controlado para la imagen */
+  height: 75px;                 /* Altura de miniatura (tipo portada de libro) */
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;               /* Evita que la imagen se deforme */
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info h3 {
+  font-size: 0.9rem;            /* Título pequeño */
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
+}
+
+.card-info p {
+  font-size: 0.75rem;           /* Descripción pequeña */
+  color: #666;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.2;
+}
+
+.card-btn {
+  font-size: 0.75rem;
+  color: #ff9800;               /* Color de enlace/botón llamativo */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-btn:hover {
+  text-decoration: underline;
+}
+
+/* --- Adaptabilidad Responsive --- */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* En tablets pasa a 2 columnas de 2 */
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;         /* En celulares pasa a 1 sola columna vertical */
+  }
+}

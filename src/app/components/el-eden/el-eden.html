@@ -1,0 +1,23 @@
+
+
+<section class="reflexion-section">
+  <!-- Título principal centrado -->
+  <h2 class="titulo-principal">{{ tituloPrincipal }}</h2>
+
+  <!-- Contenedor flex responsivo (inversión de orden con CSS) -->
+  <div class="reflexion-container">
+    <!-- Texto a la izquierda -->
+    <div class="texto-box">
+      <h3>{{ subtitulo }}</h3>
+      
+      @for (parrafo of parrafos; track parrafo) {
+        <p>{{ parrafo }}</p>
+      }
+    </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="imagen-box">
+      <img [src]="imagenUrl" [alt]="subtitulo" />
+    </div>
+  </div>
+</section>

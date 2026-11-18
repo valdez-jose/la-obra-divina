@@ -1,0 +1,18 @@
+
+<div class="banner-publicidad">
+  <div class="cards-container">
+    <div class="libro-card" *ngFor="let libro of libros">
+      <!-- Imagen a la izquierda -->
+      <img [src]="libro.imagen" [alt]="libro.titulo" class="card-img" />
+      
+      <!-- Contenido a la derecha (Título, descripción y botón) -->
+      <div class="card-info">
+        <h3>{{ libro.titulo }}</h3>
+        <p>{{ libro.descripcion }}</p>
+        <a [href]="libro.enlace" target="_blank" rel="noopener noreferrer" class="card-btn">
+          {{ libro.textoBoton }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+
+
+.mensaje {
+  width: 100%;
+  min-height: 400px;
+  background-color: #183b32;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 25px;
+  box-sizing: border-box;
+}
+
+.mensaje-contenido {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.mensaje h1 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #d4b46a;
+}
+
+.mensaje p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #e0e8e3;
+}
+
+.btn-alabanza {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 13px 28px;
+
+  background-color: #d4b46a;
+  color: #183b32;
+
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+
+  transition: all 0.3s ease;
+}
+
+.btn-alabanza:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+
+.oracion {
+  margin: 30px auto;
+  padding: 20px 25px;
+  max-width: 850px;
+
+  background-color: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #d4b46a;
+  border-radius: 6px;
+}
+
+.oracion h2 {
+  color: #d4b46a;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.oracion p {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .mensaje {
+    padding: 40px 20px;
+  }
+
+  .mensaje h1 {
+    font-size: 27px;
+  }
+
+  .mensaje p {
+    font-size: 15px;
+  }
+
+}
